@@ -14,7 +14,8 @@ class ProductsManagement {
     }
     removeProducts(product) {
         for (var i = 0; i < this.listproducts.length; i++) {
-            if (this.listproducts[i] == product) {
+            
+            if ( this.listproducts[i].name == product.name && this.listproducts[i].description == product.description && this.listproducts[i].quantity == product.quantity ){
                 this.listproducts.splice(i, 1);
                 return;
             }
@@ -23,7 +24,7 @@ class ProductsManagement {
     }
     updateProducts(product, newproduct) {
         for (var i = 0; i < this.listproducts.length; i++) {
-            if (this.listproducts[i] == product) {
+            if (this.listproducts[i].name == product.name && this.listproducts[i].description == product.description && this.listproducts[i].quantity == product.quantity) {
                 this.listproducts[i] = newproduct;
                 return;
             }
